@@ -1,1 +1,62 @@
+#write a program to print a multiplication table of the entered number.
 
+number = int(input ("Enter the number of which the user wants to print the multiplication table: "))
+print ("The Multiplication Table of: ", number)
+for count in range(1, 11):
+    print (number, 'X', count, '=', number * count)
+
+#Write a program to input price and quantity. Calculate the amount and if amount
+
+Price = float(input("Enter price : "))
+Qty = int(input("Enter quantity : "))
+Amt = Price * Qty
+if Amt>10000:
+    Discount = Amt * 0.2
+    print("The discounted amount is ", Discount)
+else:
+    Discount = Amt * 0.1
+    print("The discounted amount is ", Discount)
+
+#Write a program to count the frequency of every element in a given list
+
+random_list = ['A','A','B','B','B','C','D']
+frequency = {}
+for item in random_list:
+    if item in frequency:
+        frequency[item]+=1
+    else:
+        frequency[item]=1
+print(frequency)
+
+#Write a program to check whether the entered number is Armstorng or not.
+
+num = int(input("Enter your number: "))
+sum = 0
+temp = num
+while temp > 0:
+    digit = temp%10
+    sum+=digit**3
+    temp//=10
+if num==sum:
+    print(num,"is an armstrong number")
+else:
+    print(num,"is not an armstrong number")
+    
+# Write a program to check character is Lowercase or Uppercase
+
+ch = input("Please Enter Your Own English ALphabet : ")
+if(ch >= 'A' and ch <= 'Z'):
+    print("The Given Character ",ch, "is an Uppercase Alphabet")
+elif(ch >= 'a' and ch <= 'z'):
+    print("The Given Character ",ch, "is a Lowercase Alphabet")
+else:
+    print("The Given Character ",ch, "is Not a Lower or Uppercase Alphabet")
+    
+#Write a program to create a list ‘lst’ as given below and then remove an element froman element from the list based on the user’s input.
+
+lst = ["The", "winners", "are", "Jayesh", "Smyrna", "Rani", “and” ,"Kush"]
+print("Initial List is", lst)
+ele=input("Enter the element to be removed from the list: ")
+lst.remove(ele)
+print("List after removing",ele, "is")
+print(lst)
