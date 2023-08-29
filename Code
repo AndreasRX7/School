@@ -54,9 +54,9 @@ else:
     
 #Write a program to create a list ‘lst’ as given below and then remove an element froman element from the list based on the user’s input.
 
-lst = ["The", "winners", "are", "Jayesh", "Smyrna", "Rani", "and" ,"Kush"]
-print("Initial List is", lst)
+lst = ["The","winners","are","Jayesh","Smyrna","Rani","and","Kush"]
+print("Initial List is",lst)
 ele=input("Enter the element to be removed from the list: ")
 lst.remove(ele)
-print("List after removing",ele, "is")
+print("List after removing",ele,"is")
 print(lst)
