@@ -1,2 +1,2 @@
 # About this repository
-This repository is being used to help me and mah homies. If you are a teacher reading this then you will never find me. I think. Hopefully not.
+This repository has been made to help people due to the school programs have indentation errors. I have fixed the errors so now you can compare code if you are wrong.
