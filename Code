@@ -28,7 +28,7 @@ for item in random_list:
         frequency[item]=1
 print(frequency)
 
-#Write a program to check whether the entered number is Armstorng or not.
+#Write a program to check whether the entered number is Armstrong or not.
 
 num = int(input("Enter your number: "))
 sum = 0
@@ -37,20 +37,20 @@ while temp > 0:
     digit = temp%10
     sum+=digit**3
     temp//=10
-if num==sum:
+if num == sum:
     print(num,"is an armstrong number")
 else:
     print(num,"is not an armstrong number")
     
 # Write a program to check character is Lowercase or Uppercase
 
-ch = input("Please Enter Your Own English ALphabet : ")
-if(ch >= 'A' and ch <= 'Z'):
-    print("The Given Character ",ch, "is an Uppercase Alphabet")
-elif(ch >= 'a' and ch <= 'z'):
-    print("The Given Character ",ch, "is a Lowercase Alphabet")
+ch = input("Enter the alphabet: ")
+if(ch>='A' and ch<='Z'):
+    print(ch,"is an uppercase alphabet")
+elif(ch>='a' and ch<='z'):
+    print(ch,"is a lowercase alphabet")
 else:
-    print("The Given Character ",ch, "is Not a Lower or Uppercase Alphabet")
+    print(ch,"is not a uppercase or lowercase character")
     
 #Write a program to create a list ‘lst’ as given below and then remove an element froman element from the list based on the user’s input.
 
