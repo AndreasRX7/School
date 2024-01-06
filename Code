@@ -1,62 +1,74 @@
-#write a program to print a multiplication table of the entered number.
+[DISCLAIMER: If you are practising at home you will need to install the following modules/packages: matplotlib, openCV, (Numpy comes predownloaded for jupyter notebook)]
 
-number = int(input ("Enter the number of which the user wants to print the multiplication table: "))
-print ("The Multiplication Table of: ", number)
-for count in range(1, 11):
-    print (number, 'X', count, '=', number * count)
+#1. Using Matplotlib and the given data, plot a bar chart:
+No_of_people_voted=[23, 45, 31 ,40,35]
+Area covered = [“a1”,”a2”,”a3”,”a4”,”a5’]
 
-#Write a program to input price and quantity. Calculate the amount and if amount
+import matplotlib.pyplot as plt
+No_of_people_voted=[23,45, 31, 40, 35]
+plt.bar(['a1','a2','a3','a4','a5'],No_of_people_voted)
+plt.title ('Bar chart')
+plt.xlabel ('Area covered')
+plt.ylabel ('No of people voted')
+plt. show()
 
-Price = float(input("Enter price : "))
-Qty = int(input("Enter quantity : "))
-Amt = Price * Qty
-if Amt>10000:
-    Discount = Amt * 0.2
-    print("The discounted amount is ", Discount)
-else:
-    Discount = Amt * 0.1
-    print("The discounted amount is ", Discount)
 
-#Write a program to count the frequency of every element in a given list
+#2. Using matplotlib and the given data, plot a line chart.
+x_axis = [3, 4, 6, 2, 8]
+y_axis =[ 9, 10, 8, 7, 6]
 
-random_list = ['A','A','B','B','B','C','D']
-frequency = {}
-for item in random_list:
-    if item in frequency:
-        frequency[item]+=1
-    else:
-        frequency[item]=1
-print(frequency)
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.array([3, 4, 6, 2, 8])
+y=np.array ([9,10,8,7,6])
+plt.plot(x,y)
+plt.show()
 
-#Write a program to check whether the entered number is Armstrong or not.
 
-num = int(input("Enter your number: "))
-sum = 0
-temp = num
-while temp > 0:
-    digit = temp%10
-    sum+=digit**3
-    temp//=10
-if num == sum:
-    print(num,"is an armstrong number")
-else:
-    print(num,"is not an armstrong number")
-    
-# Write a program to check character is Lowercase or Uppercase
+#3. WAP to read csv file saved in your system and display its information.
 
-ch = input("Enter the alphabet: ")
-if(ch>='A' and ch<='Z'):
-    print(ch,"is an uppercase alphabet")
-elif(ch>='a' and ch<='z'):
-    print(ch,"is a lowercase alphabet")
-else:
-    print(ch,"is not a uppercase or lowercase character")
-    
-#Write a program to create a list ‘lst’ as given below and then remove an element froman element from the list based on the user’s input.
+import pandas as pd
+s=pd.read_csv("[Enter the directory of the csv file]")
+print(s)
 
-lst = ["The","winners","are","Jayesh","Smyrna","Rani","and","Kush"]
-print("Initial List is",lst)
-ele=input("Enter the element to be removed from the list: ")
-lst.remove(ele)
-print("List after removing",ele,"is")
-print(lst)
+
+#4. WAP to read csv file saved in your system and display its information.
+(The question appears to be repeated in the file sent by the school. From what I can understand from the file this seems to be the same as above but instead shows mean values)
+(Use your brain.)
+
+import pandas as pd
+s=pd.read_csv("D:\jaipur.csv")
+print(s.head(5))
+s1=s.sort_values(by=’date’,ascending=False)
+print(s1)
+
+
+#5. Write a program to read an image and display using Python.
+
+import cv2 as cv
+import matplotlib.pyplot as plt
+img=cv.imread('[Enter the directory of the image here]')
+plt.imshow(img)
+plt.show()
+
+
+#6. Write a program to read an image and upload and display an image in grayscale mode.
+
+import cv2
+import matplotlib.pyplot as plt
+img=cv2.imread('[Enter the directory of the image here]',0)
+plt.imshow(img,cmap='gray')
+plt.title('Taj Mahal')
+plt.axis('off')
+plt.show()
+
+
+#7. Upload an image of favourite picture and display the picture in RGB color
+
+import cv2
+import matplotlib.pyplot as plt
+img=cv2.imread('D:/mycity.jpeg’)
+plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
+plt.title('picture')
+plt.axis('off')
+plt.show()
