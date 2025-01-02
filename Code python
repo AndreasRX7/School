@@ -1,6 +1,6 @@
 15 python codes.
 
-#1 Write a python program to find average and grade for given marks
+#1. Write a python program to find average and grade for given marks
 
 mm=int(input ("Enter the maximum marks: "))
 eng=int(input("Enter the marks of English: "))
@@ -42,7 +42,7 @@ print("Discount: ",dis)
 print("Selling Price : ", sel_price)
 
 
-#3.Write a python program to calculate perimeter/circumference and area of shapes such as triangle, rectangle, square and circle.
+#3. Write a python program to calculate perimeter/circumference and area of shapes such as triangle, rectangle, square and circle.
 
 side=float(input("Enter the side of square: "))
 ar_sq=float(side*side)
@@ -67,3 +67,16 @@ ba=float(input("enter the base of right angled triangle: "))
 h=float(input("enter the height of right angled triangle: "))
 ar_tri=float(float((ba*h)/2))
 print("Area of triangle is: ", ar_tri)
+
+
+#4. Write a program to calculate Simple and Compound interest.
+
+p = float(input('Enter the principal amount: '))
+r = float(input('Enter the rate of interest: '))
+t = float(input ('Enter the time duration: '))
+si = (p*r*t)/100
+ci= p * ((1+r/100) **t - 1)
+print('Simple interest is: %.2f' % (si))
+print('Compound interest is: %.2f' % (ci))
+
+
