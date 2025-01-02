@@ -114,3 +114,14 @@ GST_amt = np - op
 GST_per = ((GST_amt*100) / op)
 print ("GST Rate = ",GST_per, "%")
 print ("GST Amount = ", GST_amt)
+
+
+#8. Write a program to find the largest and smallest numbers in a list. 
+
+l = []
+num=int(input("Enter the Number of List Elements: "))
+for i in range (0, num):
+    ele=int(input ("Please enter the Value of Element%d : ")) 
+    l.append(ele)
+print("The Smallest Element in the List is: ", min(l))
+print("The Largest Element in the List is: ", max(l))
