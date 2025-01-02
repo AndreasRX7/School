@@ -1,3 +1,5 @@
+15 python codes.
+
 #1 Write a python program to find average and grade for given marks
 
 mm=int(input ("Enter the maximum marks: "))
@@ -38,3 +40,30 @@ sel_price=cost-dis
 print("Cost Price: ", cost)
 print("Discount: ",dis)
 print("Selling Price : ", sel_price)
+
+
+#3.Write a python program to calculate perimeter/circumference and area of shapes such as triangle, rectangle, square and circle.
+
+side=float(input("Enter the side of square: "))
+ar_sq=float(side*side)
+print("Area of Square: ", ar_sq)
+peri=float(4*side);
+print("Perimeter of square is: ",peri)
+print()
+r=float(input ("Enter the radius of circle: ")) 
+ar_ci=float(3.14*r*r)
+print("Area of circle: ",ar_ci)
+per_ci=float(2*3.14*r);
+print("Perimter of circle is: ",per_ci)
+print()
+l=float(input("Enter the length of rectangle: "))
+b=float(input("Enter the breadth of rectangle: "))
+ar_rect=float(l*b)
+print("Area of rectangle is: ",ar_rect)
+per_rect=float(2*(l+b))
+print("Perimeter of rectangle is: ",per_rect)
+print()
+ba=float(input("enter the base of right angled triangle: "))
+h=float(input("enter the height of right angled triangle: "))
+ar_tri=float(float((ba*h)/2))
+print("Area of triangle is: ", ar_tri)
