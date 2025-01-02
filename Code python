@@ -143,7 +143,7 @@ multip = range (n, (n*m) + 1, n)
 print(list (multip))
 
 
-#11.Write a program to count the number of vowels in a user entered string
+#11. Write a program to count the number of vowels in a user entered string
 
 string=input("Enter string: ")
 vowels=0
@@ -152,3 +152,45 @@ for i in string:
         vowels=vowels+1
 print("Number of vowels are:")
 print(vowels)
+
+
+#12. Write a program to print the words starting with a particular alphabet in a user entered string. 
+
+txt=input("Enter the text: ")
+alpha=input("Enter alphabet to print the words: ")
+for i in txt.split():
+    if i.startswith (alpha):
+        print (i)
+
+
+#13 Create a dictionary to store states and their capitals
+
+states_and_capitals = {
+'Andhra Pradesh': 'Amaravati', 'Telangana': 'Hyderabad', 'Karnataka': 'Bengaluru', 'Tamil Nadu': 'Chennai', 'Maharashtra': 'Mumbai'
+}
+print(states_and_capitals)
+
+
+#14. Write a function to create the dictionary to store names and marks in 5 subjects. Take the no. of students as input from the user."
+
+def create_students_dict():
+    num_students = int(input("Enter the number of students: "))
+    students_marks = {}
+    for _ in range(num_students):
+        name = input("Enter the student's name: ")
+        marks = []
+        for i in range(1, 6):
+            mark = int(input(f"Enter the mark for subject {i}: ")) 
+            marks.append(mark)
+        students_marks[name] = marks
+    return students_marks
+
+
+#15. Function to count occurrences of a given alphabet in each string 
+
+def count_alphabet_occurrences(strings, alphabet):
+    occurrences = {}
+    for string in strings:
+        count = string.count(alphabet)
+        occurrences[string] = count
+    return occurrences
