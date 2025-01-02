@@ -93,3 +93,14 @@ elif (cost < sale_amt):
     print ("Total Profit =",amt)
 else:
     print("No Profit No Loss")
+
+
+# 6. Write a program to calculate EMI for Amount, Period and Interest.
+
+p = float(input("Enter the principal: "))
+r = float(input("Enter the rate of interest: "))
+t = float(input ("Enter the time: "))
+r = r/(12 * 100)
+t = t*12
+emi = (p * r * pow (1 + r, t)) / (pow (1 + r, t) - 1)
+print ("Monthly EMI is= ",emi)
