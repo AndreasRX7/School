@@ -27,3 +27,14 @@ elif per>=30 and per<=40:
 else:
     gr="Invalid Grade"
 print ("The Grade is: ", gr)
+
+
+#2. Write a python program to find the sale price of an item with a given cost and discount (%).
+
+cost=float(input("Enter the cost: "))
+dis_per=float(input("Enter the discount in % : "))
+dis=cost*dis_per/100
+sel_price=cost-dis
+print("Cost Price: ", cost)
+print("Discount: ",dis)
+print("Selling Price : ", sel_price)
