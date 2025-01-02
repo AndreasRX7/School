@@ -125,3 +125,11 @@ for i in range (0, num):
     l.append(ele)
 print("The Smallest Element in the List is: ", min(l))
 print("The Largest Element in the List is: ", max(l))
+
+
+#9. Write a program to find the sum of squares of the first 100 natural numbers.
+
+sum1 = 0
+for i in range (1, 101):
+    sum1=sum1 + (i*i)
+print ("Sum of squares is : ", sum1)
