@@ -1,74 +1,29 @@
-[DISCLAIMER: If you are practising at home you will need to install the following modules/packages: matplotlib, openCV, (Numpy comes predownloaded for jupyter notebook)]
+#1 Write a python program to find average and grade for given marks
 
-#1. Using Matplotlib and the given data, plot a bar chart:
-No_of_people_voted=[23, 45, 31 ,40,35]
-Area covered = [“a1”,”a2”,”a3”,”a4”,”a5’]
-
-import matplotlib.pyplot as plt
-No_of_people_voted=[23,45, 31, 40, 35]
-plt.bar(['a1','a2','a3','a4','a5'],No_of_people_voted)
-plt.title ('Bar chart')
-plt.xlabel ('Area covered')
-plt.ylabel ('No of people voted')
-plt. show()
-
-
-#2. Using matplotlib and the given data, plot a line chart.
-x_axis = [3, 4, 6, 2, 8]
-y_axis =[ 9, 10, 8, 7, 6]
-
-import matplotlib.pyplot as plt
-import numpy as np
-x=np.array([3, 4, 6, 2, 8])
-y=np.array ([9,10,8,7,6])
-plt.plot(x,y)
-plt.show()
-
-
-#3. WAP to read csv file saved in your system and display its information.
-
-import pandas as pd
-s=pd.read_csv("[Enter the directory of the csv file]")
-print(s)
-
-
-#4. WAP to read csv file saved in your system and display its information.
-(The question appears to be repeated in the file sent by the school. From what I can understand from the file this seems to be the same as above but instead shows mean values)
-(Use your brain.)
-
-import pandas as pd
-s=pd.read_csv("[Enter the directory of the csv file]")
-print(s.head(5))
-s1=s.sort_values(by=’date’,ascending=False)
-print(s1)
-
-
-#5. Write a program to read an image and display using Python.
-
-import cv2 as cv
-import matplotlib.pyplot as plt
-img=cv.imread('[Enter the directory of the image here]')
-plt.imshow(img)
-plt.show()
-
-
-#6. Write a program to read an image and upload and display an image in grayscale mode.
-
-import cv2
-import matplotlib.pyplot as plt
-img=cv2.imread('[Enter the directory of the image here]',0)
-plt.imshow(img,cmap='gray')
-plt.title('Taj Mahal')
-plt.axis('off')
-plt.show()
-
-
-#7. Upload an image of favourite picture and display the picture in RGB color
-
-import cv2
-import matplotlib.pyplot as plt
-img=cv2.imread('D:/mycity.jpeg’)
-plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
-plt.title('picture')
-plt.axis('off')
-plt.show()
+mm=int(input ("Enter the maximum marks: "))
+eng=int(input("Enter the marks of English: "))
+acc=int(input("Enter the marks of Accountancy: "))
+bs=int(input("Enter the marks of Business Studies: "))
+eco=int(input ("Enter the marks of Economics: "))
+ip=int(input("Enter the marks of Informatics Practices: "))
+tot=eng+acc+bs+eco+ip
+t_mm=mm*5
+per=(tot/t_mm)*100
+print("Average is: ",per, "%")
+if per>=91 and per<=100:
+    gr='Al'
+elif per>=80 and per<=90:
+    gr='A2'
+elif per>=70 and per<=80: 
+    gr='B1'
+elif per>=60 and per<=70:
+    gr='B2'
+elif per>=50 and per<=60:
+    gr='C1'
+elif per>=40 and per<=50:
+    gr='C2'
+elif per>=30 and per<=40:
+    gr='D'
+else:
+    gr="Invalid Grade"
+print ("The Grade is: ", gr)
