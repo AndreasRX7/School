@@ -104,3 +104,13 @@ r = r/(12 * 100)
 t = t*12
 emi = (p * r * pow (1 + r, t)) / (pow (1 + r, t) - 1)
 print ("Monthly EMI is= ",emi)
+
+
+#7.Write a program to calculate tax - GST 
+
+op = float(input("Enter original Price: "))
+np = float(input("Enter Net Price: "))
+GST_amt = np - op
+GST_per = ((GST_amt*100) / op)
+print ("GST Rate = ",GST_per, "%")
+print ("GST Amount = ", GST_amt)
