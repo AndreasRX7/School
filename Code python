@@ -80,3 +80,16 @@ print('Simple interest is: %.2f' % (si))
 print('Compound interest is: %.2f' % (ci))
 
 
+#5. Write a program to calculate profit-loss for a given Cost and Sell Price.
+
+cost = float (input ("Enter the cost of the product: "))
+sale_amt = float (input ("Enter the Sales Amount: "))
+amt=0
+if (cost > sale_amt):
+    amt = cost - sale_amt
+    print ("Total Loss Amount = ", amt)
+elif (cost < sale_amt):
+    amt = sale_amt - cost
+    print ("Total Profit =",amt)
+else:
+    print("No Profit No Loss")
