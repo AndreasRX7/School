@@ -1,1 +1,95 @@
+1. To create a database SCHOOL
 
+CREATE DATABASE SCHOOL;
+Show Databases;
+Use SCHOOL;
+
+
+2. To create a student table with the student id, class, section, gender,
+name, dob, and marks as attributes where the student id is the
+primary key.
+
+CREATE TABLE Student(SID char(4) primary key, SName varchar(20)
+not null, Class int not null, Section char(1) ,Gender char(1), DOB date
+not null, Marks float(4,1));
+Desc Student;
+
+
+3. To insert the details of at least 10 students in the above table.
+
+INSERT INTO Student Values(‘S001’, ‘Ananya’, 11,’A’, ‘F’ , ‘2007-03-25’ ,
+40);
+SELECT * FROM Student;
+
+
+4. To delete the details of a particular student whose marks are equal
+to 10.
+
+DELETE FROM Student WHERE Marks=10;
+
+
+5. To increase marks by 5% for those students who have Marks more
+than 50.
+
+UPDATE Student SET Marks=Marks+(Marks*5/100) WHERE Marks>50;
+
+
+6. To display the entire content of the table.
+
+SELECT * FROM Student;
+
+
+7. To display StudentID, Name and Marks of those students who are
+scored marks more than 50.
+
+SELECT SID, SName,Marks FROM Student WHERE Marks>50;
+
+
+8. To display the details of students, who are from section ‘A’ and Class
+11;
+
+SELECT * FROM Student WHERE Section = ‘A’ AND Class=11;
+
+
+9. To add a new column email in the above table with appropriate data
+type.
+
+ALTER TABLE Student ADD Email varchar(20);
+
+
+10. To add default constraint to the new column EmailID.
+
+ALTER TABLE Student MODIFY EmailID varchar(20) DEFAULT
+‘abc@example.com’;
+
+
+11. To display Rno, Name, DOB of those students who are born between
+‘2005- 01-01’ and ‘2005-12-31’.
+
+SELECT SID,SName,DOB FROM Student WHERE DOB BETWEEN
+‘2005- 01-01’ and ‘2005-12-31’;
+
+
+12. To display SID, Name, DOB, Marks, Email of those male students in
+ascending order of their names.
+
+SELECT SID, SName, DOB FROM Student WHERE Gender = ‘M’ ORDER
+BY SNAME ;
+
+
+13. To display SID, Gender, Name, DOB, Marks, Email in descending order
+of their marks.
+
+SELECT SID, SName, Gender, DOB, Marks, Email FROM Student
+ORDER BY Marks desc;
+
+
+14. To display the unique section available in the table.
+
+SELECT DISTINCT(Section) FROM Student;
+
+
+15. Display all the rows which contains ‘ya’ in the name from SCHOOL
+table.
+
+Select * from STUDENT where SName like ‘%ya’;
